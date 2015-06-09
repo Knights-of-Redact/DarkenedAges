@@ -30,7 +30,7 @@ In the beginning, most people chose the easy options, and only deranged otaku te
 
 Then came the attack on the El-Hamdan (EH) encryption [unofficially attributed to the late Frau Tse Tung, but you didn't hear it from me ;) ]**[1]**
 
-In AD 2102, peace was beginning to make sense.
+#### In AD 2102, peace was beginning to make sense.
 
 As you already know, copies of all telegrams are kept on record at the Publicly Available International Archive (PAIA) [aka Leakvile :)]
 Now that EH encryption has been broken, 
