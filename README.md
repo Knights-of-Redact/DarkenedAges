@@ -49,4 +49,4 @@ More info soon, meanwhile here's how to become a player:
 * It is recommended to follow `@darkenedages` and have `#DarkenedAges` in your profile, but the formal definition of "player" is "one who appears at `players.csv`" ;)
 
 Essentially [index.html](http://bl.ocks.org/thedod/raw/7a4a81224b5bed676b00/) was produced with `python darkened.py > index.html`.
-The idea of this "full retard crypto suite" is to create an environment where everyone can have a go at code breaking.
+The motivation behind this "full retard crypto suite" is to create an environment where everyone can have a go at code breaking.
