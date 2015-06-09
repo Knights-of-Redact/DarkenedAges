@@ -28,7 +28,7 @@ This way, checks and balances are kept, and those who have nothing to hide have 
 
 In the beginning, most people chose the easy options, and only deranged otaku teenagers bothered to manage one (It was easier for them. The Japanese manuals are the best. The English translation deliberately sucks).
 
-Then came the attack on the El-Hamdan (EH) encryption [unofficially attributed to the late Frau Tse Tung, but you didn't hear it from me ;) ][1]
+Then came the attack on the El-Hamdan (EH) encryption [unofficially attributed to the late Frau Tse Tung, but you didn't hear it from me ;) ]**[1]**
 
 In AD 2102, peace was beginning to make sense.
 
@@ -50,3 +50,9 @@ More info soon, meanwhile here's how to become a player:
 
 Essentially [index.html](http://bl.ocks.org/thedod/raw/7a4a81224b5bed676b00/) was produced with `python darkened.py > index.html`.
 The motivation behind this "full retard crypto suite" is to create an environment where everyone can have a go at code breaking.
+
+_______________________________________
+
+**[1]** "It was never truly attributed to FTT, but it is believe that she has found the transformation between a 1/K El-Hamdan key and 1/K of the One Time Pad (OTP) equivalent of the session key when expanded (although she has failed to see that the data was chunked on a word boundary, as discovered by ████ 2 years earlier)." -- "Faster Than Thought", a biography of FTT by Jon Reinhardt
+
+
