@@ -1,6 +1,6 @@
 ### DarkenedAges &mdash; a twister-based game of intrigue and bad crypto
 
-![Trust ██ like █████. Be ███████.](https://gist.github.com/thedod/7a4a81224b5bed676b00/raw/f52968d6ce38a27161a4e38fe91bcb0adb4c3b6e/trust-shield.png)
+![Trust ██ like █████. Be ███████.](https://i.imgur.com/WfhHOX0.png)
 
 #### In AD 2101, peace was beginning.
 
