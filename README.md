@@ -4,7 +4,7 @@
 
 #### In AD 2101, peace was beginning.
 
-The Unigalitarian Church has abolished the internet. A source of a century of war, misfurtone, and mistrust.
+The Unigalitarian Church has abolished the internet. A source of a century of war, misfortune, and mistrust.
 Instead, people are only allowed to communicate via a church sanctioned telegram system.
 
 How can they enforce this?
