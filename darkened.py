@@ -5,6 +5,42 @@ import json
 CHAR_REDACTED = '\u2588'  # Full block.
 CHAR_CONFLICT = '\u2573'  # Box drawings light diagonal cross.
 
+#------ begin prefab input
+cipher1 = [
+    ['lgPNUJU8', 'qLvBBQ==', '5GfdMat4', 'z8hPe4BlxxdUMXzi4w==', '2IheMA==',
+     'uZyB', 'wVCtnQ==', 'VnU=', '/pTNipiB55M=', 'XcT1gQ==', 'gxU8', '9MYX',
+     'io0='],
+    ['0fOyC2/y', 'bg8=', 'bu2T', 'rJH6dWUzpg==', 'B4BTkvtl', '+Ug=', '6wky',
+     'H78=', 'nx8=', 'TO3/fbE=', 'tqw=', 'S4k8', '+mXOsQ==', 'E3rblIM=',
+     'bIu6qbrh1g=='],
+    ['sfjl', 'JBxnLbfe0k0n', 'BShgq+QrmdquMA==', 'VYD1hx8=', 'MLk=', 'ig==',
+     'oasqOoWF', 'Asw=', 'Rof1s/gpQQONcnk=', 'ZW3zOSnTvyg=', 'QlA=',
+     '6Q0qOw=='],
+    ['9fPa', '2mFZdDltLL4=', '13vdBg==', '+eWH', 'koB24LLGnxs=', 'CedkJ3k=',
+     'b41+QUU=', 'fRkV', '4/Yc', 'anY6cA==', 'muk=', '9LrH', '5t1uXU0=',
+     'M1eqTaWs'],
+    ['8Ah2Pq4=', 'ouQ=', 'miJQVgwle6yOcg==', 'PPc=', '6jes', 'kYsY2ynZdg==']]
+pad1 = [
+    ['xWusIv5F', '29q4dg==', 'zAa7Rc4K', 'pqY7HvIXqHA1RRWMhA==', None, None,
+     'lSXD+g==', None, None, None, None, None, None],
+    ['sJDRbhyB', None, None, None, None, 'uDs=', 'jWhA', None, '6Ho=',
+     'J4OQCp0=', '39g=', 'JuhF', 'kgS41A==', 'fR+t8fE=', None],
+    ['5ZCA', None, None, None, 'Wco=', None, None, None, 'L+mR1ohML2foHA0=',
+     None, None, None],
+    ['sbuL', 'qhM8EFAOWM0=', 'oxO8cg==', None, '/eYQidGv/nc=', 'epMLVQA=',
+     None, None, 'i5dv', 'Dh9fFA==', None, 'gNKi', 'lrEPMyg=', None],
+    [None, None, '+UoxOmBAFcvrFg==', 'Xo4=', None, '4f56t0C6WA==']]
+pad2 = [
+    [None, None, None, None, 'nvo/RQ==', '7ebk', None, 'Pxs=',
+     'jvG/+ffvzr8=', 'KayU9Q==', '8H1Z', 'nKdz', '5OI='],
+    [None, 'GmA=', 'GoX2', '/OSQHAtXxw==', 'd+Ej94lL', None, None, 'fsw=',
+     None, None, None, None, None, None, 'AO7bwt+F+A=='],
+    [None, 'YXBKZdaztixJ', 'YEYD2Z1b7bPBXg==', 'NvKU5HQ=', None, '6w==',
+     '085ZT+nx', 'bao=', None, 'FwiAXEih3EA=', 'ICk=', 'r1l+FQ=='],
+    [None, None, None, 'jY3i', None, None, 'R/kWIDE=', 'O01B', None, None,
+     '84c=', None, 'kq8PNCM=', 'UCXLPs2F'],
+    ['h2cYGdo=', 'wIE=', None, None, 'nl/J', None]]
+#------ end prefab input
 
 ## [['an', 'msg', 'is', 'a', 'list', 'of', 'lines,'],
 ##  ['where', 'each', 'line', 'is', 'a', 'list', 'of', 'words.']]
@@ -102,54 +138,20 @@ followed by a second one"""
     print('### Redacting prefab plaintext')
     redaction = redact(plaintext,2)
     for pad in redaction['pads']:
-        print('# pOTP >>>')
+        print('\n# pOTP >>>')
         print(pad)
         print('# >>> Unredaction')
         print(unredact(redaction['cipher'],pad))
-    print('### >>> integration >>>')
+    print('\n### >>> integration >>>')
     print(unredact(redaction['cipher'],*redaction['pads']))
-    print('### Simulating incoming [prefab] ciphertext and conflicting pads')
-    cipher1 = [
-        ['lgPNUJU8', 'qLvBBQ==', '5GfdMat4', 'z8hPe4BlxxdUMXzi4w==', '2IheMA==',
-         'uZyB', 'wVCtnQ==', 'VnU=', '/pTNipiB55M=', 'XcT1gQ==', 'gxU8', '9MYX',
-         'io0='],
-        ['0fOyC2/y', 'bg8=', 'bu2T', 'rJH6dWUzpg==', 'B4BTkvtl', '+Ug=', '6wky',
-         'H78=', 'nx8=', 'TO3/fbE=', 'tqw=', 'S4k8', '+mXOsQ==', 'E3rblIM=',
-         'bIu6qbrh1g=='],
-        ['sfjl', 'JBxnLbfe0k0n', 'BShgq+QrmdquMA==', 'VYD1hx8=', 'MLk=', 'ig==',
-         'oasqOoWF', 'Asw=', 'Rof1s/gpQQONcnk=', 'ZW3zOSnTvyg=', 'QlA=',
-         '6Q0qOw=='],
-        ['9fPa', '2mFZdDltLL4=', '13vdBg==', '+eWH', 'koB24LLGnxs=', 'CedkJ3k=',
-         'b41+QUU=', 'fRkV', '4/Yc', 'anY6cA==', 'muk=', '9LrH', '5t1uXU0=',
-         'M1eqTaWs'],
-        ['8Ah2Pq4=', 'ouQ=', 'miJQVgwle6yOcg==', 'PPc=', '6jes', 'kYsY2ynZdg==']]
-    pad1 = [
-        ['xWusIv5F', '29q4dg==', 'zAa7Rc4K', 'pqY7HvIXqHA1RRWMhA==', None, None,
-         'lSXD+g==', None, None, None, None, None, None],
-        ['sJDRbhyB', None, None, None, None, 'uDs=', 'jWhA', None, '6Ho=',
-         'J4OQCp0=', '39g=', 'JuhF', 'kgS41A==', 'fR+t8fE=', None],
-        ['5ZCA', None, None, None, 'Wco=', None, None, None, 'L+mR1ohML2foHA0=',
-         None, None, None],
-        ['sbuL', 'qhM8EFAOWM0=', 'oxO8cg==', None, '/eYQidGv/nc=', 'epMLVQA=',
-         None, None, 'i5dv', 'Dh9fFA==', None, 'gNKi', 'lrEPMyg=', None],
-        [None, None, '+UoxOmBAFcvrFg==', 'Xo4=', None, '4f56t0C6WA==']]
-    pad2 = [
-        [None, None, None, None, 'nvo/RQ==', '7ebk', None, 'Pxs=',
-         'jvG/+ffvzr8=', 'KayU9Q==', '8H1Z', 'nKdz', '5OI='],
-        [None, 'GmA=', 'GoX2', '/OSQHAtXxw==', 'd+Ej94lL', None, None, 'fsw=',
-         None, None, None, None, None, None, 'AO7bwt+F+A=='],
-        [None, 'YXBKZdaztixJ', 'YEYD2Z1b7bPBXg==', 'NvKU5HQ=', None, '6w==',
-         '085ZT+nx', 'bao=', None, 'FwiAXEih3EA=', 'ICk=', 'r1l+FQ=='],
-        [None, None, None, 'jY3i', None, None, 'R/kWIDE=', 'O01B', None, None,
-         '84c=', None, 'kq8PNCM=', 'UCXLPs2F'],
-        ['h2cYGdo=', 'wIE=', None, None, 'nl/J', None]]
+    print('\n\n### Simulating incoming [prefab] ciphertext and conflicting pads')
     for pad in [pad1,pad2]:
-        print('# pOTP >>>')
+        print('\n# pOTP >>>')
         #print(json.dumps(pad,indent=4))
         print(pad)
         print('# >>> Unredaction')
         print(unredact(cipher1,pad))
-    print('### >>> integration >>>')
+    print('\n### >>> integration >>>')
     print(unredact(cipher1,pad1,pad2))
 
     print('</pre></body></html>')
