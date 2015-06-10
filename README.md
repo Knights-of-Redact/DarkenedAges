@@ -2,6 +2,8 @@
 
 ![Trust ██ like █████. Be ███████.](https://i.imgur.com/WfhHOX0.png)
 
+### Tl;DR [sample output](http://bl.ocks.org/thedod/raw/7a4a81224b5bed676b00/).
+
 #### In AD 2101, peace was beginning.
 
 The Unigalitarian Church has abolished the internet. A source of a century of war, misfortune, and mistrust.
