@@ -95,8 +95,6 @@ def integrate(*args):
     if len(args)==1: return args[0]
     return integrate2(args[0],integrate(*args[1:]))
     
-    return reduce(integrate2,args)
-    
 def _redact(s):
     plaintext = str2bytes(s)
     pad = makepad(plaintext)
