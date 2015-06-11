@@ -2,7 +2,17 @@
 
 ![Trust ██ like █████. Be ███████.](https://i.imgur.com/WfhHOX0.png)
 
-### Tl;DR [sample output](http://bl.ocks.org/thedod/raw/7a4a81224b5bed676b00/).
+### TL;DR We play with partial leaks that look like this
+
+      ██████ Alice, ███ ███████ ███ ███████ ███████ ████ ███████ legal ███████████ ███ delays ███ ██ serious problem
+    + ██████ ██████ ███ doesn't get ███████ ███████ ████ ███████ legal ███████████ ███ ██████ ███ ██ ███████ problem
+    = ______________________________________________________________________________________________________________
+      ██████ Alice, ███ doesn't get ███████ ███████ ████ ███████ legal ███████████ ███ delays ███ ██ serious problem
+    + ...
+    = ______________________________________________________________________________________________________________
+      Unlike Alice, Bob doesn't get dropped packets when pinging legal department, and delays are no serious problem
+
+### Slightly longer examples [here](http://bl.ocks.org/thedod/raw/7a4a81224b5bed676b00/) and [here](https://pastee.org/v46af).
 
 #### In AD 2101, peace was beginning.
 
