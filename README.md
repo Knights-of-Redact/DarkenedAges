@@ -58,7 +58,7 @@ More info soon, meanwhile here's how to become a player:
 
 * Every player should have a [twister](http://twister.net.co) account
 * <del>Fork this, add a line about yourself to `players.csv`, and mention `@darkenedages` on twister with a link to your forked gist.</del> Bugger it. Just twist `@darkenedages I want to play #DarkenedAges` ;)
-* It is recommended to follow `@darkenedages` and have `#DarkenedAges` in your profile, but the formal definition of "player" is "one who appears at `players.csv`" ;)
+* It is recommended to follow `@darkenedages` and have `#DarkenedAges` in your profile, but the formal definition of "player" is "one who appears at [players.csv](https://gist.github.com/thedod/7a4a81224b5bed676b00#file-players-csv)" ;)
 
 Essentially [index.html](http://bl.ocks.org/thedod/raw/7a4a81224b5bed676b00/) was produced with `python darkened.py > index.html`.
 The motivation behind this "full retard crypto suite" is to create an environment where everyone can have a go at code breaking.
