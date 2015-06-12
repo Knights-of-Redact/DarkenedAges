@@ -2,9 +2,19 @@
 
 ![Trust ██ like █████. Be ███████.](https://i.imgur.com/WfhHOX0.png)
 
-### Tl;DR [sample output](http://bl.ocks.org/thedod/raw/7a4a81224b5bed676b00/).
+### TL;DR We play with partial leaks that look like this
 
-#### In AD 2101, peace was beginning.
+      ██████ Alice, ███ ███████ ███ ███████ ███████ ████ ███████ legal ███████████ ███ delays ███ ██ serious problem
+    + ██████ ██████ ███ doesn't get ███████ ███████ ████ ███████ legal ███████████ ███ ██████ ███ ██ ███████ problem
+    = ______________________________________________________________________________________________________________
+      ██████ Alice, ███ doesn't get ███████ ███████ ████ ███████ legal ███████████ ███ delays ███ ██ serious problem
+    + ...
+    = ______________________________________________________________________________________________________________
+      Unlike Alice, Bob doesn't get dropped packets when pinging legal department, and delays are no serious problem
+
+#### Slightly longer examples [here](http://bl.ocks.org/thedod/raw/7a4a81224b5bed676b00/) and [here](https://pastee.org/v46af).
+
+### In AD 2101, peace was beginning.
 
 The Unigalitarian Church has abolished the internet. A source of a century of war, misfortune, and mistrust.
 Instead, people are only allowed to communicate via a church sanctioned telegram system.
@@ -48,7 +58,7 @@ More info soon, meanwhile here's how to become a player:
 
 * Every player should have a [twister](http://twister.net.co) account
 * <del>Fork this, add a line about yourself to `players.csv`, and mention `@darkenedages` on twister with a link to your forked gist.</del> Bugger it. Just twist `@darkenedages I want to play #DarkenedAges` ;)
-* It is recommended to follow `@darkenedages` and have `#DarkenedAges` in your profile, but the formal definition of "player" is "one who appears at `players.csv`" ;)
+* It is recommended to follow `@darkenedages` and have `#DarkenedAges` in your profile, but the formal definition of "player" is "one who appears at [players.csv](https://gist.github.com/thedod/7a4a81224b5bed676b00#file-players-csv)" ;)
 
 Essentially [index.html](http://bl.ocks.org/thedod/raw/7a4a81224b5bed676b00/) was produced with `python darkened.py > index.html`.
 The motivation behind this "full retard crypto suite" is to create an environment where everyone can have a go at code breaking.
