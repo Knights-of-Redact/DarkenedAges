@@ -1,10 +1,11 @@
-<!DOCTYPE html><html lang="en"><head><title>Testing DarkenedAges library</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /></head><body><pre>
+<!DOCTYPE html>
+<html lang="en"><head><title>Testing DarkenedAges library</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /></head><body><pre>
 ### Players
 
-# Sandy Claws (sandyclaws,@sandyclaws):
+# Sandy Claws (sandyclaws, @sandyclaws):
   From the Magic Tuna Show (ask your kids).
 
-# Rabbi Yoav (broyo,@thedod):
+# Rabbi Yoav (broyo, @thedod):
   Confession sensor technician (CST) and ChurchApproved Rabbi (CAR)
   [technically, a priest] in the Geneva parish. Born 2061 in Kibbutz
   Tzofna [burnt down during the 2067 reforms]. Graduated Ofakim Yeshiva
@@ -12,50 +13,56 @@
   (mainly due to family and origin). 77% heterosexual. No other known
   dominant deviatoins.
 
-# Forth Inc. (forth,@forth):
+# Forth Inc. (forth, @forth):
   Registered ████████.
 
-# Daan II (daanii,@black_puppydog):
+# Daan II (daanii, @black_puppydog):
   ██ ███ ███████ of ██████.
 
 
-### Simulating a random selection of 3 trustees for msgid #DA14341720253787
-['daanii', 'forth', 'broyo']
-
-
 ### Redacting prefab plaintext (2 trustees)
+{"daanii": {"pads": {"daanii": [["krEZr3A9", null, "Ew+m5z8=",
+"zMwQeJk="], [null, "oDo=", "Gg==", null, "LSr3"]]}, "subject": "Is
+this thing on?", "sender": "alice", "trustees": ["daanii", "broyo"],
+"msgid": "DA14341999781041", "recipients": ["bob", "carol"]},
+"__public__": {"cipher": [["2tRryldO", "5F+i", "dWbUlEs=",
+"oKV+HbU="], ["to5RIGi8VsQ=", "wkM=", "ew==", "mIQCOq/5", "QkSS"]],
+"subject": "Is this thing on?", "sender": "alice", "trustees":
+["daanii", "broyo"], "msgid": "DA14341999781041", "recipients":
+["bob", "carol"]}, "__to__": {"pads": {"daanii": [["krEZr3A9", null,
+"Ew+m5z8=", "zMwQeJk="], [null, "oDo=", "Gg==", null, "LSr3"]],
+"broyo": [[null, "kDfH", null, null], ["0OE9TAfLM6A=", null, null,
+"6+FhVcGd", null]]}, "subject": "Is this thing on?", "sender":
+"alice", "trustees": ["daanii", "broyo"], "msgid": "DA14341999781041",
+"recipients": ["bob", "carol"]}, "broyo": {"pads": {"broyo": [[null,
+"kDfH", null, null], ["0OE9TAfLM6A=", null, null, "6+FhVcGd", null]]},
+"subject": "Is this thing on?", "sender": "alice", "trustees":
+["daanii", "broyo"], "msgid": "DA14341999781041", "recipients":
+["bob", "carol"]}}
 
-# pOTP >>>
-[[None, None, None, 'lkwXFnI='], ['RZbLFdmBs6I=', None, 'Yw==', None, '40cX']]
-# >>> Unredaction
-██████ ███ █████ line,
-followed ██ a ██████ one
+# >>> Unredaction for trustee: daanii
+Here's ███ first line,
+████████ by a ██████ one
 
-# pOTP >>>
-[['Fa/b2OSk', 'ldGy', 'lofC2bA=', None], [None, 'wIc=', None, 'p4kCjP/a', None]]
-# >>> Unredaction
-Here's the first █████
-████████ by █ second ███
+# >>> Unredaction for trustee: broyo
+██████ the █████ █████
+followed ██ █ second ███
 
 ### >>> integration >>>
 Here's the first line,
 followed by a second one
 
 
-### Simulating incoming [prefab] ciphertext and conflicting pads
+### Unredaction of prefab message (with conflicting pads)
 
-# pOTP >>>
-[['xWusIv5F', '29q4dg==', 'zAa7Rc4K', 'pqY7HvIXqHA1RRWMhA==', None, None, 'lSXD+g==', None, None, None, None, None, None], ['sJDRbhyB', None, None, None, None, 'uDs=', 'jWhA', None, '6Ho=', 'J4OQCp0=', '39g=', 'JuhF', 'kgS41A==', 'fR+t8fE=', None], ['5ZCA', None, None, None, 'Wco=', None, None, None, 'L+mR1ohML2foHA0=', None, None, None], ['sbuL', 'qhM8EFAOWM0=', 'oxO8cg==', None, '/eYQidGv/nc=', 'epMLVQA=', None, None, 'i5dv', 'Dh9fFA==', None, 'gNKi', 'lrEPMyg=', None], [None, None, '+UoxOmBAFcvrFg==', 'Xo4=', None, '4f56t0C6WA==']]
-# >>> Unredaction
+# >>> Unredaction for trustee: ted
 Sharky says (after interrogating ████ ███ Tung ██ ████████ ████ ███ ███ ██
 access ██ ███ ███████ ██████ As far ██ we know, it may have never ███████
 The █████████ ██████████ █████ is █ ██████ ██ independent ████████ ██ ████
 DHQ predicts that ███ official story █████ ███ has died ██ the plane ██████
 █████ ██ challenged by ███ public.
 
-# pOTP >>>
-[[None, None, None, None, 'nvo/RQ==', '7ebk', None, 'Pxs=', 'jvG/+ffvzr8=', 'KayU9Q==', '8H1Z', 'nKdz', '5OI='], [None, 'GmA=', 'GoX2', '/OSQHAtXxw==', 'd+Ej94lL', None, None, 'fsw=', None, None, None, None, None, None, 'AO7bwt+F+A=='], [None, 'YXBKZdaztixJ', 'YEYD2Z1b7bPBXg==', 'NvKU5HQ=', None, '6w==', '085ZT+nx', 'bao=', None, 'FwiAXEih3EA=', 'ICk=', 'r1l+FQ=='], [None, None, None, 'jY3i', None, None, 'R/kWIDE=', 'O01B', None, None, '84c=', None, 'kq8PNCM=', 'UCXLPs2F'], ['h2cYGdo=', 'wIE=', None, None, 'nl/J', None]]
-# >>> Unredaction
+# >>> Unredaction for trustee: dan
 ██████ ████ ██████ █████████████ Frau Tze ████ in person), that she had no
 ██████ to the Pujinda paper. ██ ███ as ██ █████ ██ ███ ████ █████ leaked.
 ███ El-Hamdan encryption crack ██ a result of ███████████ research by FTT.

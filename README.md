@@ -14,6 +14,8 @@
 
 #### Slightly longer examples [here](http://bl.ocks.org/thedod/raw/7a4a81224b5bed676b00/) and [here](https://pastee.org/v46af).
 
+For public moves and gossip, see [#DarkenedAges](https://twisterio.com/search?kw=%23darkenedages) on [twister](http://twister.net.co)
+
 ### In AD 2101, peace was beginning.
 
 The Unigalitarian Church has abolished the internet. A source of a century of war, misfortune, and mistrust.
