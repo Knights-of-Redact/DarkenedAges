@@ -2,6 +2,7 @@
 import random
 import time
 import codecs
+import hashlib
 import json
 import csv
 import textwrap
@@ -112,6 +113,10 @@ def unredact(cipher, pads, trustees=[]):
             mapmsgs(base642bytes,
                 mapmsgs(integrate, *pads64))))
 
+def hash64(b):
+    "Returns base64 of sha1 (appended as hash to paste urls against evil eye)"
+    return str(codecs.encode(hashlib.sha1(b).digest(),'base64').strip(),'ascii')
+
 ## Game functions
 
 def makeid():
@@ -181,7 +186,7 @@ prefab = {
     ["sbuL", "qhM8EFAOWM0=", "oxO8cg==", None, "/eYQidGv/nc=", "epMLVQA=",
     None, None, "i5dv", "Dh9fFA==", None, "gNKi", "lrEPMyg=", None],
     [None, None, "+UoxOmBAFcvrFg==", "Xo4=", None, "4f56t0C6WA=="]]},
-    "recipients": ["bob", "carol"], "subject": "Hey, sport. YOU connect"
+    "recipients": ["bob", "carol"], "subject": "Hey, sport. YOU connect "
     "the dots."}, "ted": {"trustees": ["ted", "dan"], "sender": "alice",
     "msgid": "DA14341968415407", "pads": {"ted": [["xWusIv5F", "29q4dg==",
     "zAa7Rc4K", "pqY7HvIXqHA1RRWMhA==", None, None, "lSXD+g==", None,
@@ -197,7 +202,6 @@ prefab = {
 
 def testit():
     "Todo: turn this into proper unit tests, anyone?"
-    print('<!DOCTYPE html>\n<html lang="en"><head><title>Testing DarkenedAges library</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /></head><body><pre>')
     print('### Players')
     for p in getplayers().values():
         print('\n# {name} ({player}, @{twister}):'.format(**p))
@@ -214,11 +218,9 @@ def testit():
     print('\n\n### Unredaction of prefab message (with conflicting pads)')
     for t in prefab['__public__']['trustees']:
         print('\n# >>> Unredaction for trustee: {}'.format(t))
-        print(unredact(prefab['__public__'], prefab[t]))
+        print(unredact(prefab['__public__'], prefab['__to__'],trustees=[t]))
     print('\n### >>> integration >>>')
     print(unredact(prefab['__public__'], prefab['__to__']))
-
-    print('</pre></body></html>')
 
 if __name__=='__main__':
     testit()

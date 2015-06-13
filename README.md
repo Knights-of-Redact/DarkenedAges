@@ -12,7 +12,8 @@
     = ______________________________________________________________________________________________________________
       Unlike Alice, Bob doesn't get dropped packets when pinging legal department, and delays are no serious problem
 
-#### Slightly longer examples [here](http://bl.ocks.org/thedod/raw/7a4a81224b5bed676b00/) and [here](https://pastee.org/v46af).
+#### Slightly longer examples [here](https://raw.githubusercontent.com/Knights-of-Redact/DarkenedAges/master/output.txt)
+and [here](https://pastee.org/v46af).
 
 For public moves and gossip, see [#DarkenedAges](https://twisterio.com/search?kw=%23darkenedages) on [twister](http://twister.net.co)
 
@@ -59,10 +60,14 @@ Perhaps you could trade this information with their adversaries? The possibiliti
 More info soon, meanwhile here's how to become a player:
 
 * Every player should have a [twister](http://twister.net.co) account
-* <del>Fork this, add a line about yourself to `players.csv`, and mention `@darkenedages` on twister with a link to your forked gist.</del> Bugger it. Just twist `@darkenedages I want to play #DarkenedAges` ;)
-* It is recommended to follow `@darkenedages` and have `#DarkenedAges` in your profile, but the formal definition of "player" is "one who appears at [players.csv](https://gist.github.com/thedod/7a4a81224b5bed676b00#file-players-csv)" ;)
+* <del>If you know how, add a line about yourself to [players.csv](https://github.com/Knights-of-Redact/DarkenedAges/blob/master/players.csv),
+(as a pull-request or something).</del> Bugger it. Just twist `@darkenedages I want to play #DarkenedAges` ;)
+* It is recommended to follow `@darkenedages` and have `#DarkenedAges` in your profile, but the formal definition of "player" is
+"one who appears at [players.csv](https://github.com/Knights-of-Redact/DarkenedAges/blob/master/players.csv)" ;)
 
-Essentially [index.html](http://bl.ocks.org/thedod/raw/7a4a81224b5bed676b00/) was produced with `python darkened.py > index.html`.
+The file [output.txt](https://raw.githubusercontent.com/Knights-of-Redact/DarkenedAges/master/output.txt)
+was produced with `python darkened.py > output.txt`. You should get a similar output if everything works well.
+
 The motivation behind this "full retard crypto suite" is to create an environment where everyone can have a go at code breaking.
 
 _______________________________________

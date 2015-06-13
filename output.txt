@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html lang="en"><head><title>Testing DarkenedAges library</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /></head><body><pre>
 ### Players
 
-# Sandy Claws (sandyclaws, @sandyclaws):
-  From the Magic Tuna Show (ask your kids).
+# Forth Inc. (forth, @forth):
+  Registered ████████.
 
 # Rabbi Yoav (broyo, @thedod):
   Confession sensor technician (CST) and ChurchApproved Rabbi (CAR)
@@ -13,40 +11,40 @@
   (mainly due to family and origin). 77% heterosexual. No other known
   dominant deviatoins.
 
-# Forth Inc. (forth, @forth):
-  Registered ████████.
+# Sandy Claws (sandyclaws, @sandyclaws):
+  From the Magic Tuna Show (ask your kids).
 
 # Daan II (daanii, @black_puppydog):
   ██ ███ ███████ of ██████.
 
 
 ### Redacting prefab plaintext (2 trustees)
-{"daanii": {"pads": {"daanii": [["krEZr3A9", null, "Ew+m5z8=",
-"zMwQeJk="], [null, "oDo=", "Gg==", null, "LSr3"]]}, "subject": "Is
-this thing on?", "sender": "alice", "trustees": ["daanii", "broyo"],
-"msgid": "DA14341999781041", "recipients": ["bob", "carol"]},
-"__public__": {"cipher": [["2tRryldO", "5F+i", "dWbUlEs=",
-"oKV+HbU="], ["to5RIGi8VsQ=", "wkM=", "ew==", "mIQCOq/5", "QkSS"]],
-"subject": "Is this thing on?", "sender": "alice", "trustees":
-["daanii", "broyo"], "msgid": "DA14341999781041", "recipients":
-["bob", "carol"]}, "__to__": {"pads": {"daanii": [["krEZr3A9", null,
-"Ew+m5z8=", "zMwQeJk="], [null, "oDo=", "Gg==", null, "LSr3"]],
-"broyo": [[null, "kDfH", null, null], ["0OE9TAfLM6A=", null, null,
-"6+FhVcGd", null]]}, "subject": "Is this thing on?", "sender":
-"alice", "trustees": ["daanii", "broyo"], "msgid": "DA14341999781041",
-"recipients": ["bob", "carol"]}, "broyo": {"pads": {"broyo": [[null,
-"kDfH", null, null], ["0OE9TAfLM6A=", null, null, "6+FhVcGd", null]]},
-"subject": "Is this thing on?", "sender": "alice", "trustees":
-["daanii", "broyo"], "msgid": "DA14341999781041", "recipients":
-["bob", "carol"]}}
+{"__to__": {"msgid": "DA14342296128997", "sender": "alice",
+"recipients": ["bob", "carol"], "subject": "Is this thing on?",
+"pads": {"broyo": [["DeQiOr6R", null, null, "ql8ABmM="],
+["wKFeiKus9u8=", "VLY=", "Kg==", null, null]], "daanii": [[null,
+"oM8O", "wBgmWVc=", null], [null, null, null, "z8G1nS+/", "zLhb"]]},
+"trustees": ["daanii", "broyo"]}, "broyo": {"msgid":
+"DA14342296128997", "sender": "alice", "recipients": ["bob", "carol"],
+"subject": "Is this thing on?", "pads": {"broyo": [["DeQiOr6R", null,
+null, "ql8ABmM="], ["wKFeiKus9u8=", "VLY=", "Kg==", null, null]]},
+"trustees": ["daanii", "broyo"]}, "__public__": {"msgid":
+"DA14342296128997", "sender": "alice", "recipients": ["bob", "carol"],
+"cipher": [["RYFQX5ni", "1Kdr", "pnFUKiM=", "xjZuY08="],
+["ps4y5MTbk4s=", "Ns8=", "Sw==", "vKTW8kHb", "o9Y+"]], "subject": "Is
+this thing on?", "trustees": ["daanii", "broyo"]}, "daanii": {"msgid":
+"DA14342296128997", "sender": "alice", "recipients": ["bob", "carol"],
+"subject": "Is this thing on?", "pads": {"daanii": [[null, "oM8O",
+"wBgmWVc=", null], [null, null, null, "z8G1nS+/", "zLhb"]]},
+"trustees": ["daanii", "broyo"]}}
 
 # >>> Unredaction for trustee: daanii
-Here's ███ first line,
-████████ by a ██████ one
+██████ the first █████
+████████ ██ █ second one
 
 # >>> Unredaction for trustee: broyo
-██████ the █████ █████
-followed ██ █ second ███
+Here's ███ █████ line,
+followed by a ██████ ███
 
 ### >>> integration >>>
 Here's the first line,
@@ -75,4 +73,3 @@ access to the Pujinda paper. As far as we know, it may have never leaked.
 The El-Hamdan encryption crack is a result of independent research by FTT.
 DHQ predicts that the official story (that FTT has died in the ╳╳╳╳╳ crash)
 won't be challenged by the public.
-</pre></body></html>
