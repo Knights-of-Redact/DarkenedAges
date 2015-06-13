@@ -1,9 +1,14 @@
+#!/usr/bin/env python3
 import random
+import time
 import codecs
 import json
+import csv
+import textwrap
 
 CHAR_REDACTED = '\u2588'  # Full block.
 CHAR_CONFLICT = '\u2573'  # Box drawings light diagonal cross.
+NTRUSTEES = 3  # for now(?)
 
 #------ begin prefab input
 cipher1 = [
@@ -82,6 +87,10 @@ encoded to base64.
 You think this random function is weak? *Celebrate* that ;)"""
     return random._urandom(len(b))
 
+def makeid():
+    "Looks fancy enough and would probably never collide"
+    return 'DA{:.4f}'.format(time.time()).replace('.','')
+
 def xor2(c1,c2):
     return c1^c2
 
@@ -107,15 +116,15 @@ def _unredact(cipher,pad):
         return(CHAR_CONFLICT*len(cipher))
     return str(bytes(map(xor2,cipher,pad)),'utf8','replace')
 
-def _disintegrate(value,k=8):
+def _disintegrate(value,k=NTRUSTEES):
     lucky = random.randint(0,k-1) 
     return [i==lucky and value or None for i in range(k)]
 
-def disintegrate(msg,k=8):
+def disintegrate(msg,k=NTRUSTEES):
     zipped = mapmsgs(lambda p:_disintegrate(p,k),msg)
     return [mapmsgs(lambda v:v[i],zipped) for i in range(k)]
 
-def redact(s,k=8):
+def redact(s,k=NTRUSTEES):
     redaction = mapmsgs(_redact,str2msg(s))
     return {
         'cipher': msgget(redaction,'cipher'),
@@ -128,12 +137,34 @@ def unredact(cipher64,*pads64):
             mapmsgs(base642bytes,
                 mapmsgs(integrate,*pads64))))
 
+## Game functions
+def getplayers():
+    "returns players.csv as a dict"
+    c=csv.reader(open('players.csv'))
+    names = next(c)
+    d = {}
+    for r in c:
+        p = dict(zip(names,r))
+        d[p['player']] = p
+    return d
+
+def choosetrustees(n=NTRUSTEES, exclude=[], players=None):
+    if players is None:
+        players = getplayers()
+    candidates = list(set(players.keys())-set(exclude))
+    return random.sample(candidates,n)
+
 def testit():
     "Todo: turn this into proper unit tests, anyone?"
-    plaintext = """Here's the first line,
-followed by a second one"""
     print('<!DOCTYPE html><html lang="en"><head><title>Testing DarkenedAges library</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /></head><body><pre>')
-    print('### Redacting prefab plaintext')
+    print('### Players')
+    for p in getplayers().values():
+        print('\n# {name} ({player},@{twister}):'.format(**p))
+        print('\n'.join('  '+l for l in textwrap.wrap(p['bio'])))
+    print('\n\n### Simulating a random selection of {} trustees for msgid #{}'.format(NTRUSTEES,makeid()))
+    print(choosetrustees(exclude=['GCHQ']))  # Wishful thinking ;)
+    print('\n\n### Redacting prefab plaintext (2 trustees)')
+    plaintext = "Here's the first line,\nfollowed by a second one"
     redaction = redact(plaintext,2)
     for pad in redaction['pads']:
         print('\n# pOTP >>>')
