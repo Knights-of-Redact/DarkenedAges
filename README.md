@@ -57,13 +57,99 @@ Perhaps you could trade this information with their adversaries? The possibiliti
 
 ### How to play
 
-More info soon, meanwhile here's how to become a player:
+#### First you need to join
 
 * Every player should have a [twister](http://twister.net.co) account
 * <del>If you know how, add a line about yourself to [players.csv](https://github.com/Knights-of-Redact/DarkenedAges/blob/master/players.csv),
 (as a pull-request or something).</del> Bugger it. Just twist `@darkenedages I want to play #DarkenedAges` ;)
-* It is recommended to follow `@darkenedages` and have `#DarkenedAges` in your profile, but the formal definition of "player" is
+:* It is recommended to follow `@darkenedages` and have `#DarkenedAges` in your profile, but the formal definition of "player" is
 "one who appears at [players.csv](https://github.com/Knights-of-Redact/DarkenedAges/blob/master/players.csv)" ;)
+
+#### Sending a message
+In this example we send from and to fictional characters (NPCs) [the trustees are always "real" players].
+
+    $ ./dasend.py chuck flava -s "Can't truss it" < msg.txt 
+    == Publicly twist:
+    #Darkages #DA14342254974005 public: https://pastee.org/69f38#V4F8BjwgSfzkaentZlcBsacuLNM=
+    [No need to DM NPC] flava:
+    #Darkages #DA14342254974005 full https://pastee.org/4bsd6#QxCkPf7+G3qt4u+Ibj1pQVmxdvU=
+    == DM @thedod:
+    #Darkages #DA14342254974005 trustee broyo: https://pastee.org/hzrk2#DopLVbR1IWiROpQ00u9ncZH5+RA=
+    == DM @sandyclaws:
+    #Darkages #DA14342254974005 trustee sandyclaws: https://pastee.org/yt3dd#UWIbch+CM7+W7CMKYAHEIwsd93Y=
+    == DM @forth:
+    #Darkages #DA14342254974005 trustee forth: https://pastee.org/783rv#tbsqCly/fu4uKwzwAJ73gNbGC+I=
+    
+As we see, `dasend.py` tells us what to twist and DM (maybe one day this will be integrated, no rush).
+
+#### Receiving a message
+
+If this was really happening on twister, and I was @thedod, I'd only know the `public:` and `trustee broyo:` pastes.
+What I'd do would be:
+
+    $ ./daget.py https://pastee.org/69f38#V4F8BjwgSfzkaentZlcBsacuLNM=
+    ### getting https://pastee.org/69f38#V4F8BjwgSfzkaentZlcBsacuLNM=
+    # getting paste 69f38
+    # Hash Matches
+    # Wrote file: darkive/DA14342254974005/69f38.json
+    $ ./daget.py https://pastee.org/hzrk2#DopLVbR1IWiROpQ00u9ncZH5+RA=
+    ### getting https://pastee.org/hzrk2#DopLVbR1IWiROpQ00u9ncZH5+RA=
+    # getting paste hzrk2
+    # Hash Matches
+    # Wrote file: darkive/DA14342254974005/hzrk2.json
+
+The folder `darkive/` gets created if it doesn't exist.
+
+#### Unredacting a message
+
+    $ ./unredact.py darkive/DA14342254974005/
+    # Scanning folder darkive/DA14342254974005
+    msgid: DA14342254974005
+    sender: chuck
+    recipients: ['flava']
+    trustees: ['broyo', 'forth', 'sandyclaws']
+    subject: Can't truss it
+    
+    ████ ███ ██████ ████████ ███ a ███ ████
+    Because ██ that now █ ████ my █████
+    So ██████ █ ████ to the strong
+    █████ ███ █████ ██ the █████
+    and the smile ████ █████ ████ ████
+
+Note that I could also do `./unredact.py DA14342254974005` but you
+can prefix it with `darkive` and append `/` if that's what autocomplete
+tempts you to do ;)
+
+If `flava` was a real player, he'd do:
+
+    $ ./daget.py https://pastee.org/4bsd6#QxCkPf7+G3qt4u+Ibj1pQVmxdvU=
+    ### getting https://pastee.org/4bsd6#QxCkPf7+G3qt4u+Ibj1pQVmxdvU=
+    # getting paste 4bsd6
+    # Hash Matches
+    # Wrote file: darkive/DA14342254974005/4bsd6.json
+
+He could then simulate what `forth` and `sandyclaws` could do if
+they shared the keys between them
+
+    $ ./unredact.py darkive/DA14342254974005/ forth sandyclaws
+    # Scanning folder darkive/DA14342254974005
+    msgid: DA14342254974005
+    sender: chuck
+    recipients: ['flava']
+    trustees: ['broyo', 'forth', 'sandyclaws']
+    subject: Can't truss it
+    
+    King and chief, probably had █ big beef
+    ███████ of ████ ███ I grit ██ teeth
+    ██ here's a song ██ ███ ██████
+    'Bout the shake of ███ snake
+    ███ ███ █████ went along With that
+
+#### Todo:
+
+A utility to search the darkive by from/to/subject.
+
+#### The `darkened.py` library [under the hood]
 
 The file [output.txt](https://raw.githubusercontent.com/Knights-of-Redact/DarkenedAges/master/output.txt)
 was produced with `python darkened.py > output.txt`. You should get a similar output if everything works well.
