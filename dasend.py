@@ -34,18 +34,18 @@ def main():
         players = darkened.getplayers()
         payload = redaction.pop('__public__')
         pasteurl = paste(payload, indent=4)
-        print('== Publicly twist:\n#Darkages #{} public: {}'.format(payload.get('msgid', 'bug!!!'), pasteurl))
+        print('== Publicly twist:\n#Darkenedages #{} public: {}'.format(payload.get('msgid', 'bug!!!'), pasteurl))
         payload = redaction.pop('__to__')
         pasteurl = paste(payload, indent=4)
         for r in payload['recipients']:
             if r in players:
-                print('== DM @{}:\n#Darkages #{} for {}: {}'.format(players[r]['twister'], payload.get('msgid', 'bug!!!'), pasteurl))
+                print('== DM @{}:\n#Darkenedages #{} full: {}'.format(players[r]['twister'], payload.get('msgid', 'bug!!!'), pasteurl))
             else:
-                print('[No need to DM NPC] {}:\n#Darkages #{} full: {}'.format(r, payload.get('msgid', 'bug!!!'), pasteurl))
+                print('[No need to DM NPC] {}:\n#Darkenedages #{} full: {}'.format(r, payload.get('msgid', 'bug!!!'), pasteurl))
         for t in redaction:  # Only trustees left after popping those two
             payload = redaction[t]
             pasteurl = paste(payload, indent=4)
-            print('== DM @{}:\n#Darkages #{} trustee {}: {}'.format(players[t]['twister'], payload.get('msgid', 'bug!!!'), t, pasteurl))
+            print('== DM @{}:\n#Darkenedages #{} trustee {}: {}'.format(players[t]['twister'], payload.get('msgid', 'bug!!!'), t, pasteurl))
 
 if __name__ == "__main__":
   main()

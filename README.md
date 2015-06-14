@@ -69,15 +69,15 @@ In this example we send from and to fictional characters (NPCs) [the trustees ar
 
     $ ./dasend.py chuck flava -s "Can't truss it" < msg.txt 
     == Publicly twist:
-    #Darkages #DA14342254974005 public: https://pastee.org/69f38#V4F8BjwgSfzkaentZlcBsacuLNM=
+    #Darkenedages #DA14342254974005 public: https://pastee.org/69f38#V4F8BjwgSfzkaentZlcBsacuLNM=
     [No need to DM NPC] flava:
-    #Darkages #DA14342254974005 full https://pastee.org/4bsd6#QxCkPf7+G3qt4u+Ibj1pQVmxdvU=
+    #Darkenedages #DA14342254974005 full https://pastee.org/4bsd6#QxCkPf7+G3qt4u+Ibj1pQVmxdvU=
     == DM @thedod:
-    #Darkages #DA14342254974005 trustee broyo: https://pastee.org/hzrk2#DopLVbR1IWiROpQ00u9ncZH5+RA=
+    #Darkenedages #DA14342254974005 trustee broyo: https://pastee.org/hzrk2#DopLVbR1IWiROpQ00u9ncZH5+RA=
     == DM @sandyclaws:
-    #Darkages #DA14342254974005 trustee sandyclaws: https://pastee.org/yt3dd#UWIbch+CM7+W7CMKYAHEIwsd93Y=
+    #Darkenedages #DA14342254974005 trustee sandyclaws: https://pastee.org/yt3dd#UWIbch+CM7+W7CMKYAHEIwsd93Y=
     == DM @forth:
-    #Darkages #DA14342254974005 trustee forth: https://pastee.org/783rv#tbsqCly/fu4uKwzwAJ73gNbGC+I=
+    #Darkenedages #DA14342254974005 trustee forth: https://pastee.org/783rv#tbsqCly/fu4uKwzwAJ73gNbGC+I=
     
 As we see, `dasend.py` tells us what to twist and DM (maybe one day this will be integrated, no rush).
 
