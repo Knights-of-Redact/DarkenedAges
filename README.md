@@ -12,8 +12,7 @@
     = ______________________________________________________________________________________________________________
       Unlike Alice, Bob doesn't get dropped packets when pinging legal department, and delays are no serious problem
 
-#### Slightly longer examples [here](https://raw.githubusercontent.com/Knights-of-Redact/DarkenedAges/master/output.txt)
-and [here](https://pastee.org/v46af).
+#### Slightly longer examples [here](https://raw.githubusercontent.com/Knights-of-Redact/DarkenedAges/master/output.txt) and [here](https://pastee.org/v46af).
 
 For public moves and gossip, see [#DarkenedAges](https://twisterio.com/search?kw=%23darkenedages) on [twister](http://twister.net.co)
 
