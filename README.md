@@ -61,7 +61,7 @@ Perhaps you could trade this information with their adversaries? The possibiliti
 * Every player should have a [twister](http://twister.net.co) account
 * <del>If you know how, add a line about yourself to [players.csv](https://github.com/Knights-of-Redact/DarkenedAges/blob/master/players.csv),
 (as a pull-request or something).</del> Bugger it. Just twist `@darkenedages I want to play #DarkenedAges` ;)
-* You **should** follow all other players (and `@darkendages`) [so that we can all DM each other].
+* You **should** follow all other players (and `@darkenedages`) [so that we can all DM each other].
 * It is *recommended* to have `#DarkenedAges` in your profile, but the formal definition of "player" is
 "one who appears at [players.csv](https://github.com/Knights-of-Redact/DarkenedAges/blob/master/players.csv)" ;)
 
