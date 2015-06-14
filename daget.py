@@ -21,11 +21,12 @@ def todarkive(s,folder,filename):
         sys.stderr.write('# Wrote file: {}\n'.format(filename))
 
 def daget(pasteid):
-    pasteid = pasteid.split('/')[-1] # in case it's a full url
     if '#' in pasteid:
         p,needhash = pasteid.split('#')
     else:
         p,needhash = pasteid,None
+    # Split *after* we split by "#" (sometimes hash contains /).
+    p = p.split('/')[-1] # in case it's a full url
     sys.stderr.write('# getting paste {}\n'.format(p))
     payload = pasteclient.sloppy_get(p)
     if not payload:
