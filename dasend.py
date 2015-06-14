@@ -4,6 +4,7 @@ import optparse
 import json
 import darkened
 import pastee3
+import daget
 
 __version__ = (0, 1, 0)
 
@@ -12,6 +13,7 @@ pasteclient = pastee3.PasteClient()
 def paste(value, indent=None):
     b = bytes(json.dumps(value, indent=indent).strip(), 'ascii')
     h = darkened.hash64(b)
+    print('# Pasting...')
     return '#'.join((pasteclient.paste(b, ttl=365), h))
 
 def main():
@@ -34,9 +36,11 @@ def main():
         players = darkened.getplayers()
         payload = redaction.pop('__public__')
         pasteurl = paste(payload, indent=4)
+        daget.daget(pasteurl)  # Save local copy.
         print('== Publicly twist:\n#Darkenedages #{} public: {}'.format(payload.get('msgid', 'bug!!!'), pasteurl))
         payload = redaction.pop('__to__')
         pasteurl = paste(payload, indent=4)
+        daget.daget(pasteurl)  # Save local copy.
         for r in payload['recipients']:
             if r in players:
                 print('== DM @{}:\n#Darkenedages #{} full: {}'.format(players[r]['twister'], payload.get('msgid', 'bug!!!'), pasteurl))
