@@ -102,6 +102,9 @@ The folder `darkive/` gets created if it doesn't exist.
 
 #### Unredacting a message
 
+**New:** Running `./unredact.py` without arguments shows summaries of all darkive's messages
+(todo: search).
+
     $ ./unredact.py darkive/DA14342254974005/
     # Scanning folder darkive/DA14342254974005
     msgid: DA14342254974005

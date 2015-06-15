@@ -34,18 +34,35 @@ def fromdarkive(msgid):
                 pads = d
     return cipher, pads
 
-if __name__=='__main__':
-    if len(sys.argv)<2:
-        sys.stderr.write("Usage: {} msgid [trustee ...]\n")
-        sys.exit(1)
+def showmsg(msgid,trustees=[],detailed=True):
     # Trick to allow e.g. 'darkive/DA14342254974005/' (like autocomplete does)
-    msgid = list(filter(None,sys.argv[1].split('/')))[-1]
+    msgid = list(filter(None,msgid.split('/')))[-1]
     cipher,pads = fromdarkive(msgid)
     if cipher or pads:
         d = cipher or pads
         for k in ['msgid', 'sender', 'recipients', 'trustees', 'subject']:
             if k in d:
                 print('{}: {}'.format(k,d[k]))
-    if cipher and pads:
+    if detailed and cipher:
         print()
-        print(darkened.unredact(cipher,pads,trustees=sys.argv[2:]))
+        # Todo: unmessify redact() so that we don't need this kludge :s
+        print(darkened.unredact(cipher,pads or {'pads':[]},trustees=trustees))
+
+if __name__=='__main__':
+    if len(sys.argv)<2:
+        is_detailed = False
+        if not os.path.isdir('darkive'):
+            print('No "darkive" folder. You should run daget.py first')
+            sys.exit(1)
+        msgs = [m for m in os.listdir('darkive')
+            if m!='corrupt' and os.path.isdir(os.path.join('darkive',m))]
+        if not msgs:
+            print('No messages in "darkive" folder. You should run daget.py first')
+            sys.exit(0)
+        for msgid in msgs:
+            if msgid!='corrupt' and os.path.isdir(os.path.join('darkive',msgid)):
+                print('# {} {}'.format(sys.argv[0],msgid))
+                showmsg(msgid,detailed=False)
+                print()
+    else:
+        showmsg(sys.argv[1],trustees=sys.argv[2:])
