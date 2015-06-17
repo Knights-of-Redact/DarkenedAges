@@ -6,7 +6,14 @@
   Tzofna [burnt down during the 2067 reforms]. Graduated Ofakim Yeshiva
   (a ChurchApproved institute) 2085. Level 17 communism indicators
   (mainly due to family and origin). 77% heterosexual. No other known
-  dominant deviatoins.
+  dominant deviations.
+
+# Daan II (daanii, @black_puppydog):
+  ██ ███ ███████ of ██████.
+
+# Trantor Alexis (talex, @talex):
+  A confirmed human resident of █████████ ███████████ and ChurchApproved
+  DepescheProzessor since 2048.
 
 # Zabadee O'Mally (zayo, @zayo):
    A defrocked ███████████ priest turned confession analysis contractor
@@ -15,40 +22,36 @@
 # Sandy Claws (sandyclaws, @sandyclaws):
   From the Magic Tuna Show (ask your kids).
 
-# Daan II (daanii, @black_puppydog):
-  ██ ███ ███████ of ██████.
-
 # Forth Inc. (forth, @forth):
   Registered ████████.
 
 
 ### Redacting prefab plaintext (2 trustees)
-{"broyo": {"msgid": "DA14343057215740", "subject": "Is this thing
-on?", "pads": {"broyo": [["ifj2gqG+", null, "poEIjdk=", null], [null,
-"Q3w=", "bg==", "di+gaAZs", "5qNX"]]}, "sender": "alice", "trustees":
-["forth", "broyo"], "recipients": ["bob", "carol"]}, "__to__":
-{"msgid": "DA14343057215740", "subject": "Is this thing on?", "pads":
-{"broyo": [["ifj2gqG+", null, "poEIjdk=", null], [null, "Q3w=",
-"bg==", "di+gaAZs", "5qNX"]], "forth": [[null, "mSrn", null,
-"l3yhRFk="], ["L6wCIR9GNkM=", null, null, null, null]]}, "sender":
-"alice", "trustees": ["forth", "broyo"], "recipients": ["bob",
-"carol"]}, "__public__": {"msgid": "DA14343057215740", "subject": "Is
-this thing on?", "cipher": [["wZ2E54bN", "7UKC", "wOh6/q0=",
-"+xXPIXU="], ["ScNuTXAxUyc=", "IQU=", "Dw==", "BUrDB2gI", "ic0y"]],
-"sender": "alice", "trustees": ["forth", "broyo"], "recipients":
-["bob", "carol"]}, "forth": {"msgid": "DA14343057215740", "subject":
-"Is this thing on?", "pads": {"forth": [[null, "mSrn", null,
-"l3yhRFk="], ["L6wCIR9GNkM=", null, null, null, null]]}, "sender":
-"alice", "trustees": ["forth", "broyo"], "recipients": ["bob",
-"carol"]}}
+{"__to__": {"sender": "alice", "recipients": ["bob", "carol"],
+"subject": "Is this thing on?", "msgid": "DA14345355125001", "pads":
+{"daanii": [["EX9FwomA", null, "O1oE0lk=", "8bBvQdY="], [null, "Ddw=",
+null, "PjVkQR2S", "rPqr"]], "talex": [[null, "4t54", null, null],
+["5E2TnuiWtQQ=", null, "Hw==", null, null]]}, "trustees": ["daanii",
+"talex"]}, "daanii": {"sender": "alice", "recipients": ["bob",
+"carol"], "subject": "Is this thing on?", "msgid": "DA14345355125001",
+"pads": {"daanii": [["EX9FwomA", null, "O1oE0lk=", "8bBvQdY="], [null,
+"Ddw=", null, "PjVkQR2S", "rPqr"]]}, "trustees": ["daanii", "talex"]},
+"__public__": {"cipher": [["WRo3p67z", "lrYd", "XTN2oS0=",
+"ndkBJPo="], ["giL/8ofh0GA=", "b6U=", "fg==", "TVAHLnP2", "w5TO"]],
+"sender": "alice", "recipients": ["bob", "carol"], "subject": "Is this
+thing on?", "msgid": "DA14345355125001", "trustees": ["daanii",
+"talex"]}, "talex": {"sender": "alice", "recipients": ["bob",
+"carol"], "subject": "Is this thing on?", "msgid": "DA14345355125001",
+"pads": {"talex": [[null, "4t54", null, null], ["5E2TnuiWtQQ=", null,
+"Hw==", null, null]]}, "trustees": ["daanii", "talex"]}}
 
-# >>> Unredaction for trustee: forth
-██████ the █████ line,
-followed ██ █ ██████ ███
+# >>> Unredaction for trustee: daanii
+Here's ███ first line,
+████████ by █ second one
 
-# >>> Unredaction for trustee: broyo
-Here's ███ first █████
-████████ by a second one
+# >>> Unredaction for trustee: talex
+██████ the █████ █████
+followed ██ a ██████ ███
 
 ### >>> integration >>>
 Here's the first line,
