@@ -54,8 +54,10 @@ if __name__=='__main__':
         if not os.path.isdir('darkive'):
             print('No "darkive" folder. You should run daget.py first')
             sys.exit(1)
-        msgs = [m for m in os.listdir('darkive')
-            if m!='corrupt' and os.path.isdir(os.path.join('darkive',m))]
+        msgs = [m for m in sorted(os.listdir('darkive'))  # Latest at bottom
+            if m!='corrupt' and 
+                not m.startswith('.') and  # Leave .git alone ;)
+                os.path.isdir(os.path.join('darkive',m))]
         if not msgs:
             print('No messages in "darkive" folder. You should run daget.py first')
             sys.exit(0)
