@@ -38,7 +38,7 @@ def bytes2str(b):
     return str(b, 'utf8', 'replace')
 
 def bytes2base64(b):
-    return str(codecs.encode(b, 'base64').strip(), 'ascii')
+    return str(codecs.encode(b, 'base64').strip(), 'ascii').replace('\n','')
 
 def base642bytes(b64):
     if b64 is None: return None  # Might be missing
