@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import sys
-import optparse
+import argparse
 import json
 import darkened
 import pastee3
@@ -17,19 +17,26 @@ def paste(value, indent=None):
     return '#'.join((pasteclient.paste(b, ttl=365), h))
 
 def main():
-    parser = optparse.OptionParser(
-        usage='%prog [options] From To [To ...]',
+    parser = argparse.ArgumentParser(
         epilog='This will create some pastee.org pastes, '
             'and write stuff you need to copy/paste and tweet/DM')
-    parser.add_option("-s", "--subject", default="(untitled)",
+    parser.add_argument('sender', metavar='from', help='sender of the message. That would you yourself')
+    parser.add_argument('to', nargs='+', help='receipient(s) of the message. Character name, not twister handle!')
+
+    parser.add_argument("-s", "--subject", default="(untitled)",
                       help=("Subject"))
-    parser.add_option("-d", "--debug", action="store_true",
+    parser.add_argument('-i', '--input', type=str, help='Message file. If not provided, message will be read from stdin')
+    parser.add_argument("-d", "--debug", action="store_true",
                       help=("Debug: don't crate pastes, dump as json to stdout instead"))
-    (options, args) = parser.parse_args()
-    if len(args)<2:
-        parser.print_help()
-        exit(1)
-    redaction = darkened.redact(sys.stdin.read(), sender=args.pop(0), recipients=args, subject=options.subject)
+
+    options = parser.parse_args()
+
+    if options.input is None:
+        input_lines = sys.stdin.read()
+    else:
+        with open(options.input, 'r') as f:
+            input_lines = f.read()
+    redaction = darkened.redact(input_lines, sender=options.sender, recipients=options.to, subject=options.subject)
     if options.debug:
         json.dump(redaction, sys.stdout, indent=4)
     else:
