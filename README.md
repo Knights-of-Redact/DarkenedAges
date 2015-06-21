@@ -56,6 +56,8 @@ Perhaps you could trade this information with their adversaries? The possibiliti
 
 ### How to play
 
+**Note:** All code here should be run with python3. No telling what this code might do on python2 ;)
+
 #### First you need to join
 
 * Every player should have a [twister](http://twister.net.co) account
