@@ -1,12 +1,8 @@
 ### Players
 
-# Rabbi Yoav (broyo, @thedod):
-  Confession sensor technician (CST) and ChurchApproved Rabbi (CAR)
-  [technically, a priest] in the Geneva parish. Born 2061 in Kibbutz
-  Tzofna [burnt down during the 2067 reforms]. Graduated Ofakim Yeshiva
-  (a ChurchApproved institute) 2085. Level 17 communism indicators
-  (mainly due to family and origin). 77% heterosexual. No other known
-  dominant deviations.
+# Zabadee O'Mally (zayo, @zayo):
+   A defrocked ███████████ priest turned confession analysis contractor
+  (CAC).
 
 # Daan II (daanii, @black_puppydog):
   ██ ███ ███████ of ██████.
@@ -15,47 +11,55 @@
   A confirmed human resident of █████████ ███████████ and ChurchApproved
   DepescheProzessor since 2048.
 
-# Zabadee O'Mally (zayo, @zayo):
-   A defrocked ███████████ priest turned confession analysis contractor
-  (CAC).
-
-# Sandy Claws (sandyclaws, @sandyclaws):
-  From the Magic Tuna Show (ask your kids).
+# Rabbi Yoav (broyo, @thedod):
+  Confession sensor technician (CST) and ChurchApproved Rabbi (CAR)
+  [technically, a priest] in the Geneva parish. Born 2061 in Kibbutz
+  Tzofna [burnt down during the 2067 reforms]. Graduated Ofakim Yeshiva
+  (a ChurchApproved institute) 2085. Level 17 communism indicators
+  (mainly due to family and origin). 77% heterosexual. No other known
+  dominant deviations.
 
 # Forth Inc. (forth, @forth):
   Registered ████████.
 
+# Sandy Claws (sandyclaws, @sandyclaws):
+  From the Magic Tuna Show (ask your kids).
 
-### Redacting prefab plaintext (2 trustees)
-{"__to__": {"sender": "alice", "recipients": ["bob", "carol"],
-"subject": "Is this thing on?", "msgid": "DA14345355125001", "pads":
-{"daanii": [["EX9FwomA", null, "O1oE0lk=", "8bBvQdY="], [null, "Ddw=",
-null, "PjVkQR2S", "rPqr"]], "talex": [[null, "4t54", null, null],
-["5E2TnuiWtQQ=", null, "Hw==", null, null]]}, "trustees": ["daanii",
-"talex"]}, "daanii": {"sender": "alice", "recipients": ["bob",
-"carol"], "subject": "Is this thing on?", "msgid": "DA14345355125001",
-"pads": {"daanii": [["EX9FwomA", null, "O1oE0lk=", "8bBvQdY="], [null,
-"Ddw=", null, "PjVkQR2S", "rPqr"]]}, "trustees": ["daanii", "talex"]},
-"__public__": {"cipher": [["WRo3p67z", "lrYd", "XTN2oS0=",
-"ndkBJPo="], ["giL/8ofh0GA=", "b6U=", "fg==", "TVAHLnP2", "w5TO"]],
-"sender": "alice", "recipients": ["bob", "carol"], "subject": "Is this
-thing on?", "msgid": "DA14345355125001", "trustees": ["daanii",
-"talex"]}, "talex": {"sender": "alice", "recipients": ["bob",
-"carol"], "subject": "Is this thing on?", "msgid": "DA14345355125001",
-"pads": {"talex": [[null, "4t54", null, null], ["5E2TnuiWtQQ=", null,
-"Hw==", null, null]]}, "trustees": ["daanii", "talex"]}}
 
-# >>> Unredaction for trustee: daanii
-Here's ███ first line,
-████████ by █ second one
+### Redacting "fake redaction" to 2 trustees
+{"__public__": {"recipients": ["bob", "carol"], "cipher":
+[["W7MZY1y1", "mnb7", "TQY=", "sT6ZUgYlTlkIaog69AbAFgYCydQ/Na335paz"],
+["mCs=", "KalY", "7uvPaTg=", "D4Nc", "jaiB"]], "sender": "alice",
+"subject": "Is this thing on?", "trustees": ["forth", "zayo"],
+"msgid": "DA14348757490111"}, "forth": {"recipients": ["bob",
+"carol"], "pads": {"forth": [[null, "9BmP", null,
+"U6gRsJCtrM+AiB6yFpBI9JCKK0K31zt/BAA7"], ["+Vg=", "UMYt", "moOmB1M=",
+"duwp", null]]}, "sender": "alice", "subject": "Is this thing on?",
+"trustees": ["forth", "zayo"], "msgid": "DA14348757490111"}, "zayo":
+{"recipients": ["bob", "carol"], "pads": {"zayo": [["AtxsRC7Q", null,
+"LHU=", null], [null, null, null, null, "7Nrk"]]}, "sender": "alice",
+"subject": "Is this thing on?", "trustees": ["forth", "zayo"],
+"msgid": "DA14348757490111"}, "__to__": {"recipients": ["bob",
+"carol"], "pads": {"forth": [[null, "9BmP", null,
+"U6gRsJCtrM+AiB6yFpBI9JCKK0K31zt/BAA7"], ["+Vg=", "UMYt", "moOmB1M=",
+"duwp", null]], "zayo": [["AtxsRC7Q", null, "LHU=", null], [null,
+null, null, null, "7Nrk"]]}, "sender": "alice", "subject": "Is this
+thing on?", "trustees": ["forth", "zayo"], "msgid":
+"DA14348757490111"}}
 
-# >>> Unredaction for trustee: talex
-██████ the █████ █████
-followed ██ a ██████ ███
+# >>> Unredaction for trustee: forth
+██████ not ██ █████████
+as you think you ███
+
+# >>> Unredaction for trustee: zayo
+You're ███ as ███████████████████████████
+██ ███ █████ ███ are
+
+(one of them has utf-8 bloat)
 
 ### >>> integration >>>
-Here's the first line,
-followed by a second one
+You're not as █████████
+as you think you are
 
 
 ### Unredaction of prefab message (with conflicting pads)

@@ -206,14 +206,14 @@ def testit():
     for p in getplayers().values():
         print('\n# {name} ({player}, @{twister}):'.format(**p))
         print('\n'.join('  '+l for l in textwrap.wrap(p['bio'])))
-    print('\n\n### Redacting prefab plaintext (2 trustees)')
-    plaintext = "Here's the first line, \nfollowed by a second one"
+    print('\n\n### Redacting "fake redaction" to 2 trustees')
+    plaintext = "You're not as █████████\nas you think you are"
     redaction = redact(plaintext, 'alice', recipients=['bob','carol'], subject='Is this thing on?', k=2)
     for line in textwrap.wrap(json.dumps(redaction)): print(line)
     for t in redaction['__public__']['trustees']:
         print('\n# >>> Unredaction for trustee: {}'.format(t))
         print(unredact(redaction['__public__'], redaction[t]))
-    print('\n### >>> integration >>>')
+    print('\n(one of them has utf-8 bloat)\n\n### >>> integration >>>')
     print(unredact(redaction['__public__'], redaction['__to__']))
     print('\n\n### Unredaction of prefab message (with conflicting pads)')
     for t in prefab['__public__']['trustees']:
